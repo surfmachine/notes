@@ -1,5 +1,5 @@
 Welcome to surfmachine / notes
 ===============================================================================
 
-Here are personal day to day notes, used for work.
+Here are some personal day to day notes, used for my work.
 Feel free to reuse.
