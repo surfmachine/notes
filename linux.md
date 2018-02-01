@@ -146,6 +146,12 @@ smoothly even when I had problems in default window manager).
 - sudo apt-get install git
 
 
+## Visual Studio Code
+
+### Remove minimap on the right side of the File  Editor
+- File / Preferences / Settings:
+- "editor.minimap.enabled": false
+
 -------------------------------------------------------------------------------
 # References
 
