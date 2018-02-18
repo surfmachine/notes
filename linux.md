@@ -16,6 +16,7 @@ whoami                                 | show user $(whoami)
 hostname                               | show hostname
 history                                | history show
 [ctrl] [r]                             | hisotry search
+cat /etc/*release                      | show version info
   
 
 ## File
