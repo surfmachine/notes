@@ -115,6 +115,12 @@ git fetch --tags              | fetch tags from remote repository
 git checkout tags/[tag] -b [new-branch] | create new branch based on the given [tag]
 
 
+## Reset local commits to origin 
+Command                          | Description
+-------------------------------- | -----------------------------------------------
+git reset --hard origin/[branch] | replace local branch with remote branch entirely
+
+
 ## Switch branch
 Command                       | Description
 ----------------------------- | -----------------------------------------------
