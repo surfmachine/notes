@@ -235,6 +235,54 @@ the <body> tag during initial request. In order for this to work properly the <b
 - www.browsersync.io
 
 
+-------------------------------------------------------------------------------
+# Sass
+
+## Transform with watch
+sass --watch app.scss:app.css                           // single file
+
+
+## Transform materialize css
+sass sass/materialize.scss css/materialize.css
+
+
+## Reinstall new version
+sudo apt-get remove ruby-sass
+sudo apt-get remove ruby-compass
+gem list --local
+sass -v
+
+sudo apt-get install ruby-full
+sudo gem install sass
+sudo gem install compass
+
+sass --version
+gem list --local
+
+sudo gem install sass
+sudo gem install sass-listen
+gem list --local
+sass -v
+ruby -v
+
+
+## Installation
+sudo apt-get install ruby-full build-essential ruby
+sudo gem install sass
+
+sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt-get update
+sudo apt-get install ruby2.4
+sudo apt-get install ruby-sass
+sudo apt-get install ruby-listen
+sass -v
+
+
+## Bugfix fuer die Meldung: uninitialized constant Listen::MultiListener (NameError)
+sudo gem uninstall listen
+sudo gem install listen -v 0.7.3
+sudo gem install listen -v 0.7.3
+
 
 -------------------------------------------------------------------------------
 # Webpack
