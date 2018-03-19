@@ -97,6 +97,9 @@ Location                               | Description
 -------------------------------------------------------------------------------
 # Samples
 
+## Text replace and sort
+> cat classpath.txt | tr : \\n | sort > classpath-sorted.txt 
+
 ## SSH 
 > ssh [username]@[server]
 
