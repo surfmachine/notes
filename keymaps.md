@@ -24,6 +24,17 @@ Ctrl+\            | Side by Side Editing (Ctrl+n Switch between Editors)
 Workspace Switcher Shortcut's
 > Ctrl+Alt + arrow keys allows you to move in the workspaces.
 
+
+## References
+
+- Ubuntu 18.04 LTS mit Gnome
+  https://www.heise.de/ct/artikel/Ubuntu-18-04-LTS-Ubuntu-Desktop-statt-Unity-Kernel-Livepatching-4030925.html?hg=1&hgi=1&hgf=false
+
+- Ubuntu Gnome anstelle Unity
+  https://www.heise.de/ct/ausgabe/2017-23-Einblick-in-die-Bedienoberflaeche-von-Ubuntu-Desktop-17-10-3868496.html
+
+
+
 -------------------------------------------------------------------------------
 # Libre Office
 
