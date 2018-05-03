@@ -25,6 +25,7 @@ pull              | fetch & merge
 rebase            | merge data to local and then put local changes on top
 commit            | commit local changes to master@localhost
 push              | push commited data from master to remote origin master
+gitk              | the git repository browser
 
 
 **Development cycles**
@@ -211,6 +212,7 @@ git checkout master
 git merge --no-ff story-150-model-changes
 git status
 git push
+
 git push origin --delete story-150-model-changes   // delete branch remote (zuerst machen wegen auto-completion)
 git branch -d story-150-model-changes              // delete branch local
 
