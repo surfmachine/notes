@@ -170,6 +170,13 @@ git checkout tags/[tag]       | checkout tag
 -------------------------------------------------------------------------------
 # Merge
 
+
+## Merge from branch with override
+
+> Merge all changes from develop to stable (and override stable if needed)
+git checkout stable
+git merge -Xtheirs develop
+
 ## Merge from a tag
 
 Sample: merge Tag 2.5.6 to the master branch:
