@@ -15,6 +15,7 @@ Command                                | Remark
 whoami                                 | show user $(whoami) 
 hostname                               | show hostname
 history                                | history show
+![history-number]                      | history execute command
 [ctrl] [r]                             | hisotry search
 cat /etc/*release                      | show version info
   
