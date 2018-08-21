@@ -130,11 +130,12 @@ git checkout [branch]         | switch to [branch]
 
 
 ## Delete branch
-Command                       | Description
------------------------------ | -----------------------------------------------
-git checkout [other-branch]   | switch to another branch
-branch -d [branch]            | delete with check and warnings (z.B. falls nicht auf master commited)
-branch -D [branch]            | delete with no warnings
+Command                           | Description
+--------------------------------- | -------------------------------------------
+git checkout [other-branch]       | switch to another branch
+git branch -d [branch]            | delete local branch with check and warnings
+git branch -D [branch]            | delete local branch with no warnings
+git push origin --delete [branch] | delete remote branch
 
 
 -------------------------------------------------------------------------------
@@ -248,3 +249,81 @@ git push
 git pull --rebase
 git push
 git status
+
+
+## GIT Backup
+
+### Init remote repository as backup store
+Create remote repository for storing the backup data:
+```
+mkdir /[BACKUP-SHARE]/[BACKUP-DIR].git
+cd /[BACKUP-SHARE]/[BACKUP-DIR].git
+git init --bare
+```
+
+### Init local repository with data for the backup
+1. Init local repo
+   ```
+   cd [BACKUP-SHARE]
+   git init
+   ```
+
+2. Create ignore file for and add rules for data not going to the backup  
+   ```
+   touch .gitignore
+   nano .gitignore
+   git status
+   ```
+
+3. Check what data will be in the backup
+   ```
+   git status
+   ```
+
+4. Create first commit 
+   ```
+   git add .
+   git commit -m'initial backup'
+   ```
+
+5. Create first push
+   ```
+   git remote add origin file:///[BACKUP-SHARE]/[BACKUP-DIR].git
+   git push
+   ```
+
+### Create backup script
+Create [BACKUP-SCRIPT].sh with the following content:
+```
+#!/bin/bash
+cd [BACKUP-SHARE]
+git add .
+git commit -m'automatic backup'
+git push
+```
+
+### Define crone job
+
+For example every working day (1-5) at 4pm:
+```
+crontab -e
+0 16 * * 1-5 [BACKUP-SCRIPT].sh
+```
+
+For example every wednesday at 4am:
+```
+crontab -e
+0 4 * * 3 [BACKUP-SCRIPT].sh
+```
+
+**Cronjob syntax**
+```
+# Use the hash sign to prefix a comment
+# +---------------- minute (0 - 59)
+# |  +------------- hour (0 - 23)
+# |  |  +---------- day of month (1 - 31)
+# |  |  |  +------- month (1 - 12)
+# |  |  |  |  +---- day of week (0 - 7) (Sunday=0 or 7)
+# |  |  |  |  |
+# *  *  *  *  *  command to be executed
+```
