@@ -283,7 +283,7 @@ git init --bare
 4. Create first commit 
    ```
    git add .
-   git commit -m'initial backup'
+   git commit -m 'initial backup'
    ```
 
 5. Create first push
