@@ -69,7 +69,7 @@ ip addr show                           | show ip addr
 netstat -an                            | show port numbers  
 [ctrl] [z] then bg                     | suspend job, then run in background
 kill -3 [pid]                          | kill process mit dump
-
+host [name]                            | dns lookup to convert name to ip address
 
 
 -------------------------------------------------------------------------------
