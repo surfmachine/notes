@@ -64,7 +64,6 @@ git config --global user.name "Mona Lisa" | set user name
 # Repository
 
 ## Clone
-
 Command                       | Description
 ----------------------------- | -----------------------------------------------
 git clone [repo-url]          | clone remote repo to local disk 
