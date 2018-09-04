@@ -79,11 +79,14 @@ host [name]                            | dns lookup to convert name to ip addres
 
 Location                               | Description
 -------------------------------------- | --------------------------------------
+.profile                               | profile settings (1)
 .bashrc                                | personal settings
 .bash_aliases                          | personal aliases                       
 /etc/hostname                          | hostname
 /etc/hosts                             | hosts, z.B. 127.0.1.1 [hostname]
 
+
+(1) Use the command **source .profile** to apply new settings within the current shell. Enable the Option **Run command as login shell** within the Terminal settings to get the latest change within a new opened shell.
 
 ## Applications
 
@@ -155,7 +158,11 @@ smoothly even when I had problems in default window manager).
 
 ### Remove minimap on the right side of the File  Editor
 - File / Preferences / Settings:
-- "editor.minimap.enabled": false
+  "editor.minimap.enabled": false
+
+### Extensions
+
+- Add "Markdown Preview Enhanced" by Yiyi Wang
 
 -------------------------------------------------------------------------------
 # References

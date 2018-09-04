@@ -25,7 +25,8 @@ pull              | fetch & merge
 rebase            | merge data to local and then put local changes on top
 commit            | commit local changes to master@localhost
 push              | push commited data from master to remote origin master
-gitk              | the git repository browser
+gitk              | gui repository browser
+git-gui           | gui commits 
 
 
 **Development cycles**
@@ -44,10 +45,14 @@ git shortlog                  | show commit log very short (only comments)
 
 
 ## Configuration
-Command                                   | Description
------------------------------------------ | -----------------------------------
-git config --global user.name "Mona Lisa" | set user name
-
+Command                                     | Description
+------------------------------------------- | ---------------------------------
+git config --global user.name  [USERNAME]   | set user name, for example $USER
+git config --global user.email [EMAIL]      | set password
+git config --global color.ui auto           | set colors
+git config --global http.sslVerify false    | disable ssl verification
+git config --global push.default current    | use current as default for push 
+git config --global credential.helper cache | cache password for 15 min
 
 ## .gitignore
 - add files, directories which should be ignored by git.
