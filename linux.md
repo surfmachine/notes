@@ -164,6 +164,31 @@ smoothly even when I had problems in default window manager).
 
 - Add "Markdown Preview Enhanced" by Yiyi Wang
 
+
+## Ubuntu Customisation
+
+- Tweak Tool
+  > sudo apt install gnome-tweaks
+
+- System Monitor
+  > sudo apt install gnome-system-monitor
+
+- Double File Explorer
+  > sudo apt install doublecmd-gtk
+
+## Shortcuts 
+
+- Ctrl-Alt-D
+  > Hide all windows 
+
+- Super-H
+  > Hide single window
+
+- Super-A 
+  > Show & search applications
+
+
+
 -------------------------------------------------------------------------------
 # References
 
