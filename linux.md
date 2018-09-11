@@ -156,12 +156,16 @@ smoothly even when I had problems in default window manager).
 
 ## Visual Studio Code
 
+### Installation via snap
+- snap search "visual studio"
+- snap search vscode
+- snap install vscode --classic
+
 ### Remove minimap on the right side of the File  Editor
 - File / Preferences / Settings:
   "editor.minimap.enabled": false
 
 ### Extensions
-
 - Add "Markdown Preview Enhanced" by Yiyi Wang
 
 
