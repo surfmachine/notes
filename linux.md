@@ -116,6 +116,9 @@ Location                               | Description
 - Browser: http://[url]:3000/
 
 
+## SSL Show certificate from remote server
+>  openssl s_client -connect [server]:[port] -showcerts
+
 ## SCP
 > scp [file] [username]@[server]:[target-dir]
 
