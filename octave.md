@@ -77,6 +77,14 @@ Notes:
     function distributed with a mean of zero and a standard-deviation of one.
 
 
+## Control Statements
+ 
+Command             | Description                   
+------------------- | ---------------------------------------------------------      
+
+
+
+
 ## Files and directories
 
 Command             | Description                   
@@ -103,6 +111,9 @@ disp(a)             | Display value(s) of variable a (used for more complex type
 disp(sprintf(...))  | Display text and variables, like: sprintf('Value a=%0.2f',a)
 format long         | Display numbers with 14 decimal places
 format short        | Display numeric with  4 decimal places
+a=1, b=2, c=3       | Command chaining show output (values)
+a=1; b=2; c=3;      | Command chaining suppress output
+
 PS1(‘>> ‘)          | Change prompt to ‘>> ‘
 hist(v)             | Diagram of variable v with default number of samples
 hist(v, 50)         | Diagram of variable v with 50 samples    
@@ -360,7 +371,193 @@ ceil(v);                 % ans = 1 15 2 1
 
 ## Plotting data
 
-### 
+### Plot sin & cos
+```
+t = [0 : 0.01 : 0.98]           % create test data   
+y1 = sin(2*pi*4*t);             % define function
+plot(t,y1);                     % plot sin function with t=horizontal axes and y1=vertical axis
+y2 = cos(2*pi*4*t);             % define function
+plot(t,y2);                     % plot cos function (replacing previous sin function)
+clf;                            % clear figure
+```
+
+
+### Multi graph with attributes & save to png
+```
+t = [0 : 0.01 : 0.98]           % create test data   
+y1 = sin(2*pi*4*t);             % define function
+y2 = cos(2*pi*4*t);             % define function
+plot(t,y1);                     % plot sin function with default color
+hold on;                        % tell plot to keep current drawings/graphs
+plot(t,y2,'r');                 % plot cos function with color red
+xlabel('time');                 % add label to x-axis
+ylabel('value');                % add label to y-axis
+legend('sin','cos');            % add legend for first and second plot (will appear in the color of the graph)
+title('My Plot');               % add title
+cd 'dir';                       % change to desired directory
+print -dpng 'myPlot.png';       % save plot as png (for other formats see: help plot)
+close;                          % close graph window
+```
+
+### Multiple windows
+```
+t = [0 : 0.01 : 0.98]           % create test data   
+y1 = sin(2*pi*4*t);             % define function
+y2 = cos(2*pi*4*t);             % define function
+figure(1); plot(t,y1);          % plot sin function with default color
+figure(2); plot(t,y2,'r');      % plot cos function with color red
+```
+
+### One window with multiple plots
+```
+t = [0 : 0.01 : 0.98]           % create test data   
+y1 = sin(2*pi*4*t);             % define function
+y2 = cos(2*pi*4*t);             % define function
+subplot(1,2,1);                 % divide plot to 1x2 grid (first two params), access 1st grid (third param)
+plot(t, y1);                    % plot graph into 1st grid
+subplot(1,2,2);                 % set access to 2nd grid (third param)
+plot(t, y2);                    % plot graph into 2nd grid
+axis([0.5 1 -1 1]);             % change axis scale (of current grid) to x=0.5 to 1, y=-1 to 1
+help axis;                      % see further details
+```
+
+### One window with multiple plots
+```
+A = magic(5);                           % create test data
+imagesc(A);                             % plot 5x5 matrix with different colors 
+imagesc(A), colorbar, colormap grey;    % plot 5x5 matrix with colorbar/value legende in grey (3 commands)
+```
+
+## Control Statements
+
+### For Loop
+For Loop 1 to 10:
+```
+v=zeros(10,1)
+for i=1:10,
+  v(i) = 2^i;
+end;
+
+indices=1:10;
+for i=indices,
+  disp(v);
+end;
+```
+
+### while
+```
+i = 1;
+while i <=5,
+  v(i) = 100;
+  i = i+1;
+end;
+```
+
+### while & if with break
+```
+i = 1;
+while true,
+  v(i) = 999;  
+  i = i+1;
+  if i == 6,
+    break;
+  end;  
+end;
+```
+
+### if & elseif
+```
+v(1) = 2;
+if v(1) == 1,
+  disp('The value is one');
+elseif v(1) == 2,
+  disp('The value is two');
+else 
+  disp('The value is not one or two');
+end;  
+```
+
+### break & continue
+Uses with for or while loops.
+
+## Functions
+
+### Define function
+Create a file with the 'function name' and '.m' extension.
+The programm will recognize these files and load them as function. 
+
+Sample: squareThisNumber.m
+```
+function y = squareThisNumber(x)
+y = x^2;
+```
+
+Shell:
+```
+cd  'path to file';
+squareThisNumber(5);
+```
+
+### Define function with multiple return values
+Sample: squareAndCubeThisNumber.m
+```
+function [y1, y2] = squareAndCubeThisNumber(x)
+y1 = x^2;
+y2 = x^3;
+```
+
+Shell:
+```
+cd  'path to file';
+[a, b] = squareAndCubeThisNumber(5);     
+```
+
+### Function to compute the cost function J(theta)
+
+Graph:
+```
+    3        x
+  y 2     x
+    1  x
+    0  1  2  3  
+         x
+```
+
+Data:
+```
+X = 1 1; 1 2; 1 3]
+  1   1
+  1   2
+  1   3 
+y = [1; 2; 3]
+  1
+  2
+  3
+```
+
+costFunction.m
+```
+function J = custFunction(X, y, theta)
+
+% X is the "design matrix" containing our training examples
+% y is the class labels
+
+m = size(X,1);                      % number of training examples
+predicions = X*theta;               % predictions of hypothesis on all m examples
+sqrErrors = (predictions-y) .^2;    % squared errors
+
+J = 1/(2*m) * sum(sqrErrors);
+```
+
+Shell:
+```
+theta = [0;1]
+j = costFunction(X,y,theta)         % j = 0
+
+theta = [0;0]
+j = costFunction(X,y,theta)         % j = 2.3333 = (1^2 + 2^2 + 3^2) / (2*3)
+
+```
 
 -------------------------------------------------------------------------------
 _The end._
