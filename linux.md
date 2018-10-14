@@ -63,6 +63,7 @@ ls -lh                                 | file size 'user friendly'
 Command                                | Remark
 -------------------------------------- | --------------------------------------
 ps -fu [username]                      | show process info for the given user
+ps -ef | grep tomcat                   | show process of tomcat server
 ps auxwww \| grep [pid]                | show process
 ps -p 13621 -o pid,vsz=MEMORY -o user,group=GROUP -o comm,args=ARGS | show process info
 ip addr show                           | show ip addr
