@@ -6,6 +6,7 @@ Octave
 -------------------------------------------------------------------------------
 # References 
 
+## Software
 - Octave Software  
   https://www.gnu.org/software/octave
 
@@ -14,6 +15,31 @@ Octave
 
 - Installation tips from the machine learning course
   https://www.coursera.org/learn/machine-learning/discussions/all/threads/vgCyrQoMEeWv5yIAC00Eog?page=2
+
+## Octave Resources
+At the Octave command line, typing help followed by a function name displays documentation for a built-in function. For example, help plot will bring up help information for plotting. Further documentation can be found at the Octave documentation pages.
+
+https://octave.org/doc/interpreter/ 
+  
+## MATLAB Resources
+At the MATLAB command line, typing help followed by a function name displays documentation for a built-in function. For example, help plot will bring up help information for plotting. Further documentation can be found at the MATLAB documentation pages.
+
+http://www.mathworks.com/help/matlab/ 
+
+## Introduction to MATLAB with Onramp
+
+Made for MATLAB beginners or those looking for a quick refresh, the MATLAB Onramp is a 1-2 hour interactive introduction to the basics of MATLAB programming. Octave users are also welcome to use Onramp (requires creation of a free MathWorks account). To access Onramp:
+
+1. If you don’t already have one, create a MathWorks account at: https://www.mathworks.com/mwaccount/register
+
+2. Go to: https://matlabacademy.mathworks.com/ and click on the MATLAB Onramp button to start learning MATLAB!
+
+## MATLAB Programming Tutorials
+
+These short tutorial videos introduce MATLAB and cover various programming topics used in the assignments. Feel free to watch some now and return to reference them as you work through the programming assignments. Many of the topics below are also covered in MATLAB Onramp. 
+
+Viele Videos zu Vectors, Visualization, Matrices, Programming und Troubleshooting:
+https://www.youtube.com/watch?v=WYG2ZZjgp5M&feature=youtu.be
 
 
 -------------------------------------------------------------------------------
@@ -120,6 +146,139 @@ hist(v, 50)         | Diagram of variable v with 50 samples
 help eye            | Help for the command eye
 help randn          | Help for the command randn    
 help help           | Help of the help
+
+
+## Control Statements
+
+### For Loop
+For Loop 1 to 10:
+```
+v=zeros(10,1)
+for i=1:10,
+  v(i) = 2^i;
+end;
+
+indices=1:10;
+for i=indices,
+  disp(v);
+end;
+```
+
+### while
+```
+i = 1;
+while i <=5,
+  v(i) = 100;
+  i = i+1;
+end;
+```
+
+### while & if with break
+```
+i = 1;
+while true,
+  v(i) = 999;  
+  i = i+1;
+  if i == 6,
+    break;
+  end;  
+end;
+```
+
+### if & elseif
+```
+v(1) = 2;
+if v(1) == 1,
+  disp('The value is one');
+elseif v(1) == 2,
+  disp('The value is two');
+else 
+  disp('The value is not one or two');
+end;  
+```
+
+### break & continue
+Uses with for or while loops.
+
+## Functions
+
+### Define function
+Create a file with the 'function name' and '.m' extension.
+The programm will recognize these files and load them as function. 
+
+Sample: squareThisNumber.m
+```
+function y = squareThisNumber(x)
+y = x^2;
+```
+
+Shell:
+```
+cd  'path to file';
+squareThisNumber(5);
+```
+
+### Define function with multiple return values
+Sample: squareAndCubeThisNumber.m
+```
+function [y1, y2] = squareAndCubeThisNumber(x)
+y1 = x^2;
+y2 = x^3;
+```
+
+Shell:
+```
+cd  'path to file';
+[a, b] = squareAndCubeThisNumber(5);     
+```
+
+### Function to compute the cost function J(theta)
+
+Graph:
+```
+    3        x
+  y 2     x
+    1  x
+    0  1  2  3  
+         x
+```
+
+Data:
+```
+X = 1 1; 1 2; 1 3]
+  1   1
+  1   2
+  1   3 
+y = [1; 2; 3]
+  1
+  2
+  3
+```
+
+costFunction.m
+```
+function J = custFunction(X, y, theta)
+
+% X is the "design matrix" containing our training examples
+% y is the class labels
+
+m = size(X,1);                      % number of training examples
+predicions = X*theta;               % predictions of hypothesis on all m examples
+sqrErrors = (predictions-y) .^2;    % squared errors
+
+J = 1/(2*m) * sum(sqrErrors);
+```
+
+Shell:
+```
+theta = [0;1]
+j = costFunction(X,y,theta)         % j = 0
+
+theta = [0;0]
+j = costFunction(X,y,theta)         % j = 2.3333 = (1^2 + 2^2 + 3^2) / (2*3)
+
+```
+
 
 -------------------------------------------------------------------------------
 # Samples
@@ -426,137 +585,6 @@ help axis;                      % see further details
 A = magic(5);                           % create test data
 imagesc(A);                             % plot 5x5 matrix with different colors 
 imagesc(A), colorbar, colormap grey;    % plot 5x5 matrix with colorbar/value legende in grey (3 commands)
-```
-
-## Control Statements
-
-### For Loop
-For Loop 1 to 10:
-```
-v=zeros(10,1)
-for i=1:10,
-  v(i) = 2^i;
-end;
-
-indices=1:10;
-for i=indices,
-  disp(v);
-end;
-```
-
-### while
-```
-i = 1;
-while i <=5,
-  v(i) = 100;
-  i = i+1;
-end;
-```
-
-### while & if with break
-```
-i = 1;
-while true,
-  v(i) = 999;  
-  i = i+1;
-  if i == 6,
-    break;
-  end;  
-end;
-```
-
-### if & elseif
-```
-v(1) = 2;
-if v(1) == 1,
-  disp('The value is one');
-elseif v(1) == 2,
-  disp('The value is two');
-else 
-  disp('The value is not one or two');
-end;  
-```
-
-### break & continue
-Uses with for or while loops.
-
-## Functions
-
-### Define function
-Create a file with the 'function name' and '.m' extension.
-The programm will recognize these files and load them as function. 
-
-Sample: squareThisNumber.m
-```
-function y = squareThisNumber(x)
-y = x^2;
-```
-
-Shell:
-```
-cd  'path to file';
-squareThisNumber(5);
-```
-
-### Define function with multiple return values
-Sample: squareAndCubeThisNumber.m
-```
-function [y1, y2] = squareAndCubeThisNumber(x)
-y1 = x^2;
-y2 = x^3;
-```
-
-Shell:
-```
-cd  'path to file';
-[a, b] = squareAndCubeThisNumber(5);     
-```
-
-### Function to compute the cost function J(theta)
-
-Graph:
-```
-    3        x
-  y 2     x
-    1  x
-    0  1  2  3  
-         x
-```
-
-Data:
-```
-X = 1 1; 1 2; 1 3]
-  1   1
-  1   2
-  1   3 
-y = [1; 2; 3]
-  1
-  2
-  3
-```
-
-costFunction.m
-```
-function J = custFunction(X, y, theta)
-
-% X is the "design matrix" containing our training examples
-% y is the class labels
-
-m = size(X,1);                      % number of training examples
-predicions = X*theta;               % predictions of hypothesis on all m examples
-sqrErrors = (predictions-y) .^2;    % squared errors
-
-J = 1/(2*m) * sum(sqrErrors);
-```
-
-Shell:
-```
-theta = [0;1]
-j = costFunction(X,y,theta)         % j = 0
-
-theta = [0;0]
-j = costFunction(X,y,theta)         % j = 2.3333 = (1^2 + 2^2 + 3^2) / (2*3)
-
 ```
 
 -------------------------------------------------------------------------------
