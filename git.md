@@ -96,6 +96,7 @@ _^1^ Sample repo address: https://github.com/<my-org>/my-proj.git_
 ## Checkout from remote repo
 Command               | Description
 --------------------- | -----------------------------------------------
+git checkout -b [branch] origin/[branch] | git checkout remote branch
 git fetch             | get in sync with master repo (fetch all to local repo)
 git checkout [branch] | switch to [branch]
 
@@ -109,6 +110,8 @@ Command                       | Description
 git branch                    | show local branches
 git branch -r                 | show remote branches
 git branch -a                 | show all branches
+
+
 
 
 ## Create new branch
