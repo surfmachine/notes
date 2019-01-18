@@ -3,19 +3,8 @@ Docker
 
 [TOC]
 
-
 -------------------------------------------------------------------------------
-# TODO
-
-- Current http://training.play-with-docker.com/beginner-linux/
-- Developer Training     http://training.play-with-docker.com/
-- Administrator Training http://training.play-with-docker.com/
-
-
--------------------------------------------------------------------------------
-# Referenzen
-
-## Dokumentation
+# References
 
 - Docker
   https://github.com/arun-gupta/oreilly-docker-book
@@ -23,13 +12,15 @@ Docker
 - Docker Training
   http://training.play-with-docker.com/
 
-## Docker Images
+
+_Docker Images_
 
 - Alpine
   - https://www.alpinelinux.org/about/
   - https://wiki.alpinelinux.org/wiki/Docker
 
-## Artikel
+
+_Artikel_
 
 - Alpine vs Debian, Ubuntu and others
   - https://www.turnkeylinux.org/blog/alpine-vs-debian
@@ -37,8 +28,72 @@ Docker
   - https://nickjanetakis.com/blog/the-3-biggest-wins-when-using-alpine-as-a-base-docker-image
 
 
-## Beispiele
-==TODO==
+-------------------------------------------------------------------------------
+# Commands
+
+## machine
+
+Command                           | Description
+--------------------------------- | -------------------------------------------
+docker-machine start default      | docker vm start
+docker-machine restart default    | docker vm restart
+docker-machine stop default       | docker vm stop
+
+## image
+
+Command                           | Description
+--------------------------------- | -------------------------------------------
+docker images                     | show images in the local repository
+docker run [image-id]             | start image latest
+docker run [image-id]:[tag]       | start image with given tag
+docker stop [image-id]            | stop image
+docker rmi [image-id]             | delete images
+docker rmi $(docker images –q)    | delete all images!
+
+## docker compose
+Command                         | Description
+------------------------------- | ---------------------------------------------
+docker-compose up -d            | start container from compose.yml (-d show logs)
+docker-compose stop             | stop container from compose.yml 
+docker-compose rm               | delete container from compose.yml
+docker-compose down             | stop & delete container from compose.yml
+
+
+## container
+
+Command                           | Description
+--------------------------------- | -------------------------------------------
+docker ps                         | show running containers
+docker ps -a                      | show running containers and stopped ones
+docker rm $(docker ps –a –q)      | delete all containers
+docker logs [id]                  | show log of the image's application
+docker exec -it [id] bash         | open bash in running container
+
+## misc
+
+### build
+```
+docker build --tag=[docker-registry]/[image-name] 
+Ein neues Docker-Image aus dem Docker-File in . bauen
+```
+
+### cleanup
+```
+Docker aufrich bei Fehlermeldungen wie  z.Bsp. no space left on device
+docker volume rm $(docker volume ls -qf dangling=true)
+ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+```
+
+### edit file on running container 
+```
+Files im laufenden Container editieren (z.Bsp. standalone.xml)
+
+ssh in Docker Maschine: docker-machine ssh default
+die Container id herausfinden: docker ps -a
+ssh in Container: sudo docker exec -i -t bfdc962ca67a /bin/bash
+Man kann jetzt die gewohnten Verzeichnisse von JBoss sehen und die Files können mit vi bearbeitet werden
+```
+
 
 -------------------------------------------------------------------------------
 # Intro  
@@ -80,21 +135,13 @@ Command                       | Description
 - You can commit a container to make an image from it - but you should avoid that wherever possible.
 - It’s much better to use a repeatable Dockerfile to build your image. You’ll see that shortly.
 
-
 -------------------------------------------------------------------------------
-# Commands
+# TODO
 
-## docker images (show images, version and size)
-```
-docker images | awk '{print $1"\t"$2"\t"$7" "$8}'
-```
+- Current http://training.play-with-docker.com/beginner-linux/
+- Developer Training     http://training.play-with-docker.com/
+- Administrator Training http://training.play-with-docker.com/
 
-
-## general
-
-Command                       | Description
------------------------------ | -----------------------------------------------
-                              |
 
 
 
