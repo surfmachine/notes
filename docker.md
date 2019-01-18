@@ -65,7 +65,9 @@ Command                           | Description
 --------------------------------- | -------------------------------------------
 docker ps                         | show running containers
 docker ps -a                      | show running containers and stopped ones
-docker rm $(docker ps –a –q)      | delete all containers
+docker stop [container-id]        | stop container
+docker rm [container-id]          | remove container (must be stopped before)
+docker rm $(docker ps –a –q)      | remove all containers! 
 docker logs [id]                  | show log of the image's application
 docker exec -it [id] bash         | open bash in running container
 
