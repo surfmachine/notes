@@ -18,5 +18,3 @@ Right-Click@Project         | Autoscroll from/to source
 -------------------------------------------------------------------------------
 # Visual Studio Code
 
-
-                     .throttle(1, FiniteDuration.apply(3, TimeUnit.SECONDS), 1, ThrottleMode.shaping())

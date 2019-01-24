@@ -1,4 +1,4 @@
-Docker
+Docker 
 ===============================================================================
 
 [TOC]
@@ -11,6 +11,9 @@ Docker
 
 - Docker Training
   http://training.play-with-docker.com/
+
+- Kubernetes Resources
+  https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
 
 
 _Docker Images_
@@ -66,10 +69,11 @@ Command                           | Description
 docker ps                         | show running containers
 docker ps -a                      | show running containers and stopped ones
 docker stop [container-id]        | stop container
-docker rm [container-id]          | remove container (must be stopped before)
+docker rm [container-id]          | remove container (must be stopped before )
 docker rm $(docker ps –a –q)      | remove all containers! 
 docker logs [id]                  | show log of the image's application
 docker exec -it [id] bash         | open bash in running container
+winpty docker exec -it [id] bash  | open bash in running container on windows
 
 ## misc
 
@@ -136,6 +140,78 @@ Command                       | Description
 
 - You can commit a container to make an image from it - but you should avoid that wherever possible.
 - It’s much better to use a repeatable Dockerfile to build your image. You’ll see that shortly.
+
+
+-------------------------------------------------------------------------------
+# Notes
+
+## Kubernetes
+
+### Resources
+
+Each Container of a Pod can specify one or more of the following:
+- spec.containers[].resources.limits.cpu
+- spec.containers[].resources.limits.memory
+- spec.containers[].resources.requests.cpu
+- spec.containers[].resources.requests.memory
+
+#### CPU
+
+Number of cpu's:
+1, 2, etc.
+
+Fractional requests are allowed. 
+- A Container with spec.containers[].resources.requests.cpu of 0.5 is guaranteed half as much CPU as one that asks for 1 CPU. 
+- The expression 0.1 is equivalent to the expression 100m, which can be read as “one hundred millicpu”. Some people say “one hundred millicores”, and this is understood to mean the same thing. 
+- A request with a decimal point, like 0.1, is converted to 100m by the API, and precision finer than 1m is not allowed. For this reason, the form 100m might be preferred.
+
+CPU is always requested as an absolute quantity, never as a relative quantity; 0.1 is the same amount of CPU on a single-core, dual-core, or 48-core machine.
+
+#### Memory
+
+Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point integer using one of these suffixes: 
+- E, P, T, G, M, K. 
+- Ei, Pi, Ti, Gi, Mi, Ki (power-of-two equivalents)
+
+For example, the following represent roughly the same value:
+128974848, 129e6, 129M, 123Mi
+
+
+#### Sample Configuration
+
+Here’s an example. The following Pod has two Containers. Each Container has a request of 0.25 cpu and 64MiB (226 bytes) of memory. Each Container has a limit of 0.5 cpu and 128MiB of memory. You can say the Pod has a request of 0.5 cpu and 128 MiB of memory, and a limit of 1 cpu and 256MiB of memory.
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+spec:
+  containers:
+  - name: db
+    image: mysql
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: "password"
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+  - name: wp
+    image: wordpress
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+```
+
+
+
 
 -------------------------------------------------------------------------------
 # TODO
