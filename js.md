@@ -263,9 +263,35 @@ class Counter extends React.Component {
 _Reference: [JS-TIP-2019-01]_
 
 
-## ...
+## var vs. let vs. const
+
+var: 
+- function scoped
+- undefined when accessing a variable before it's declared
+
+let: 
+- block scoped
+- ReferenceError when accessing a variable before it's declared
+
+const:
+- block scoped
+- ReferenceError when accessing a variable before it's declared
+- can't be reassigned (but proerties can!)
+
+const sample:
 ```
+const person = {
+  name: 'Kim Kardashian'
+}
+person.name = 'Kim Kardashian West' // ✅
+
+person = {} // ❌ Assignment to constant variable.
 ```
+
+
+_Reference: [JS-VAR-LET-CONST]_
+
+
 ## ...
 ```
 ```
@@ -279,6 +305,9 @@ _Reference: [JS-TIP-2019-01]_
 - [JS-TIP-2019-01] JavaScript Tricks 01/2019
   https://levelup.gitconnected.com/9-tricks-for-kickass-javascript-developers-in-2019-eb01dd3def2a?mkt_tok=eyJpIjoiT1RjelpERmlORE5qWlRRMiIsInQiOiJGRDRJdWs3SWdRQ1ZzUWdpdCtFVFk4M21McFNOMWRkKzJKRUkxUGdWNFRLYVJ2S3ZKd3dQUGlUQjZOWVR5SGNoUDhyMWFSTXNtY2ZMMHNJcXkwRTdHVGhrR2Z5cEVjXC9QU3czSXowaFlzNFZMK3EycUVzQjR6NWlCOXR1WGdrTGUifQ%3D%3D 
 
+
+- [JS-VAR-LET-CONST] JavaScript var vs. let vs. const
+  https://medium.freecodecamp.org/var-vs-let-vs-const-in-javascript-2954ae48c037?mkt_tok=eyJpIjoiT1RjelpERmlORE5qWlRRMiIsInQiOiJGRDRJdWs3SWdRQ1ZzUWdpdCtFVFk4M21McFNOMWRkKzJKRUkxUGdWNFRLYVJ2S3ZKd3dQUGlUQjZOWVR5SGNoUDhyMWFSTXNtY2ZMMHNJcXkwRTdHVGhrR2Z5cEVjXC9QU3czSXowaFlzNFZMK3EycUVzQjR6NWlCOXR1WGdrTGUifQ%3D%3D
 
 -------------------------------------------------------------------------------
 _The end._

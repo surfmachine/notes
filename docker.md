@@ -147,6 +147,11 @@ Command                       | Description
 
 ## Kubernetes
 
+### Cheat Sheet
+
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+
 ### Resources
 
 Each Container of a Pod can specify one or more of the following:
