@@ -304,16 +304,18 @@ Alternative to webpack. Check out this.
 # Gradlew
 
 ## Commands
-Command                                           | Remark
-------------------------------------------------- | -----------------------------------------------
-./gradlew build                                   | start build
-./gradlew eclipse                                 | create eclipse project
-./gradlew bootRun                                 | start application
-./gradlew run                                     | start application
-./gradlew watch                                   | watch
-./gradlew npm_[command]                           | Alle npm Befehle können via gradle aufgerufen werden
-./gradlew npm_help                                |  zeigt die npm Hilfe
-./gradlew npm_show_webpack                        |  zeigt die möglichen Versionen vom webpack
+Command (./gradlew)                  | Remark
+------------------------------------ | ----------------------------------------
+clean                                | clean
+build                                | start build
+build -x test                        | start build skip tests
+eclipse                              | create eclipse project
+bootRun                              | start application
+run                                  | start application
+watch                                | watch
+npm_[command]                        | Alle npm Befehle können via gradle aufgerufen werden
+npm_help                             |  zeigt die npm Hilfe
+npm_show_webpack                     |  zeigt die möglichen Versionen vom webpack
 
 
 

@@ -152,6 +152,15 @@ Command                       | Description
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
 
+### KubeCtl samples
+
+- kubectl get pods -n [namespace] -w
+- kubectl logs  [pod] -c [container] -n [namespace] -f
+- kubectl exec  [pod] -c [container] -n [namespace] -it bash
+- kubectl delete pod [pod] -n [namespace]
+- kubectl describe pods [pod] -n [namespace]
+
+
 ### Resources
 
 Each Container of a Pod can specify one or more of the following:
