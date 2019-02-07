@@ -27,6 +27,10 @@ commit            | commit local changes to master@localhost
 push              | push commited data from master to remote origin master
 gitk              | gui repository browser
 git-gui           | gui commits 
+help              | help
+help -a           | help all
+help -p           | help concepts
+
 
 
 **Development cycles**
@@ -53,6 +57,10 @@ git config --global color.ui auto           | set colors
 git config --global http.sslVerify false    | disable ssl verification
 git config --global push.default current    | use current as default for push 
 git config --global credential.helper cache | cache password for 15 min
+git config --local credential.helper ""     | remove user credential details from repo
+git remote -v                               | remote repo list existing url's
+git remote add origin [URL]                 | remote repo add new url
+
 
 ## .gitignore
 - add files, directories which should be ignored by git.
@@ -99,6 +107,30 @@ Command               | Description
 git checkout -b [branch] origin/[branch] | git checkout remote branch
 git fetch             | get in sync with master repo (fetch all to local repo)
 git checkout [branch] | switch to [branch]
+
+
+## Pull, fetch from remote repo
+Command                       | Description
+----------------------------- | -----------------------------------------------
+pull                          | get remote changes to local repo
+pull origin master            | get all remote changes to local repo
+fetch origin master           | fetch remote changes of master to local master
+clean -x -d -f                | clean local repo to initial state
+reset --hard origin/master    | reset local repo and fetch latest changes from remote master to local master
+
+
+## Staging, commit and push
+Command                       | Description
+----------------------------- | -----------------------------------------------
+git add [file-name]           | add file to staging area
+git add .                     | add all to staging area
+git commmit -m "[message]"    | commit staged files with commit message
+git commit -a                 | commit all changend and all added files
+git push                      | push all commmits to remote repo
+git push -u [remote-branch]   | set remote branch to current local branch
+git push origin master        | send commits to remote master branch
+git push origin [branch-name] | send commits to remote branch 
+git push --all origin         | send all branches to remote repo
 
 
 -------------------------------------------------------------------------------
