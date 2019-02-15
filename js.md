@@ -4,6 +4,7 @@ JavaScript
 [TOC]
 
 
+
 -------------------------------------------------------------------------------
 # Snippets
 
@@ -308,6 +309,9 @@ _Reference: [JS-VAR-LET-CONST]_
 
 - [JS-VAR-LET-CONST] JavaScript var vs. let vs. const
   https://medium.freecodecamp.org/var-vs-let-vs-const-in-javascript-2954ae48c037?mkt_tok=eyJpIjoiT1RjelpERmlORE5qWlRRMiIsInQiOiJGRDRJdWs3SWdRQ1ZzUWdpdCtFVFk4M21McFNOMWRkKzJKRUkxUGdWNFRLYVJ2S3ZKd3dQUGlUQjZOWVR5SGNoUDhyMWFSTXNtY2ZMMHNJcXkwRTdHVGhrR2Z5cEVjXC9QU3czSXowaFlzNFZMK3EycUVzQjR6NWlCOXR1WGdrTGUifQ%3D%3D
+
+- [JSON] Understanding JSON in JavaScript
+  https://itnext.io/understanding-json-in-javascript-5098876d0915?mkt_tok=eyJpIjoiTWpKbVkySmhNMk16TVRFMyIsInQiOiJ5MjA2cEY4T01SK2ZNZTgxdFFUXC9tT3JUdTBwb0RZZzVuR2I2QU00WloyQk01Mm55REVxN01Bd1RjNmZrZHQwUzVndGI5WDRIV3c2QVFyYVg3NEI5OGpBYU1OdVd1bEhwYTRMZFhuMjFUdTZaaE1Rd1lWeHZyTm9sQ0RYYlZmcEEifQ%3D%3D 
 
 -------------------------------------------------------------------------------
 _The end._
