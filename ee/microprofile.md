@@ -34,6 +34,8 @@ https://developers.redhat.com/blog/2017/07/07/microprofile-optimizing-enterprise
 - Heise Microservices: Eclipse MicroProfile 1.1 baut auf Java 8
 https://www.heise.de/developer/meldung/Microservices-Eclipse-MicroProfile-1-1-baut-auf-Java-8-3793972.html
 
+- Developing REST APIs
+https://dzone.com/articles/developing-rest-apis?edition=451206&utm_source=Zone%20Newsletter&utm_medium=email&utm_campaign=integration%202019-02-07
 
 
 _The end._
