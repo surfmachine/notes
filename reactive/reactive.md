@@ -8,27 +8,22 @@ Reactive Programming
 # ReactiveX
 
 ## Introduction
+http://reactivex.io/intro.html
 
-See: http://reactivex.io/intro.html
-
-## Introduction notes
-
-
-### Synonyms
+**Synonyms**
 
 - Publisher / Subcriber 
 - Source    / Sink
 
-### Subscribe
+**Subscribe**
 - onNext (0..n times)
 - onCompleted or onError (1 time) 
  
-### Unsubscribing
+**Unsubscribing**
 - unsubscribe methode
 - The results of this unsubscription will cascade back through the chain of operators that applies to theObservable that the observer subscribed to, and this will cause each link in the chain to stop emitting items
 
-
-### Hot, Cold and Connectable Observers
+**Hot, Cold and Connectable Observers**
 - A “hot” Observable may begin emitting items as soon as it is created, and so any observer who later subscribes to thatObservable may start observing the sequence somewhere in the middle. 
 
 - A “cold” Observable, on theother hand, waits until an observer subscribes to it before it begins to emit items, and so such an observer isguaranteed to see the whole sequence from the beginning. 
@@ -146,13 +141,33 @@ Varieties of Subject
 
 See: http://reactivex.io/documentation/scheduler.html
 
+Implementation Sample: 
+Reactor and RxJava provide thread pool abstractions, called Schedulers, to use with the publishOn operator that is used to switch processing to a different thread pool. The schedulers have names that suggest a specific concurrency strategy — for example, “parallel” (for CPU-bound work with a limited number of threads) or “elastic” (for I/O-bound work with a large number of threads). If you see such threads, it means some code is using a specific thread pool Scheduler strategy.
 
 
+## Implementing your own operators
+See http://reactivex.io/documentation/implement-operator.html 
 
-## Misc
 
-- Implementing your own operators
-  http://reactivex.io/documentation/implement-operator.html 
+-------------------------------------------------------------------------------
+# Reactive Streams
+
+## Introduction
+http://www.reactive-streams.org/ 
+
+## The Reactive Streams initiative
+The Reactive Streams initiative is an initiative to provide a standard for asynchronous stream processing with non-blocking back pressure. This standard is specified through the following interface:
+- Processor<T,R> - This class represents a processing stage, which is both a Subscriber and a Publisher and obeys the contracts of both.
+- Publisher<T> - This is a provider of a potentially unbounded number of sequenced elements, publishing them according to the demand received from its Subscribers.
+- Subscriber<T> - Instances of this class will receive calls to Subscriber.onSubscribe(Subscription) once after passing an instance of Subscriber to Publisher.subscribe(Subscriber)
+- Subscription - This class represents a one-to-one lifecycle of a Subscriber subscribing to a Publisher.
+
+## Reactive Streams Data Flow
+While dealing with reactive streams, the data flow as follows:
+1. The subscribe method is called on a Publisher instance.
+2. Then a Subscription object is created and the onSubscribe method of the Subscriber is executed with the Subscription object.
+3. After that, a Subscriber will call the request method in the Subscription class to specify the number of objects it can process (If this method is not called explicitly, an unbounded number of objects is requested).
+4. Then the Subscriber can receive objects via the onNext method. If the Subscriber receives all the objects it requested, it can request more object or cancel the Subscription by calling onComplete. If at some point there is an error the Publisher calls the onError method on the Subscriber.
 
 
 -------------------------------------------------------------------------------
@@ -169,9 +184,40 @@ See: http://reactivex.io/documentation/scheduler.html
 
 
 
+-------------------------------------------------------------------------------
+# Spring Webflux & Reactor
+
+## Introduction
+
+- Introduction to Spring WebFlux
+  https://auth0.com/blog/introduction-getting-started-with-spring-webflux-api/
+  Source Code
+  https://github.com/auth0-blog/spring-webflux-oauth
+
+- Spring Reactive Stack
+  https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html
 
 
+### Spring WebFlux
+To support reactive programming and the creation of reactive systems, the Spring Boot team created a whole new web stack called Spring WebFlux. 
 
+This new web stack supports annotated controllers, functional endpoints, WebClient (analogous to RestTemplate in Spring Web MVC), WebSockets and a lot more.
+
+### Reactor (Reactive Streams library)
+Reactor is the reactive library of choice for Spring WebFlux. It provides the Mono and Flux API types to work on data sequences of 
+- 0..1 (Mono) and 
+- 0..N (Flux) 
+
+through a rich set of operators aligned with the ReactiveX vocabulary of operators. Reactor is a Reactive Streams library and, therefore, all of its operators support non-blocking back pressure. Reactor has a strong focus on server-side Java. It is developed in close collaboration with Spring.
+
+The implementations support operators like map, filter, reduce, and flatMap which maps every entry in a Publisher to another Publisher. Last but not least, in order to get data from a publisher(Flux or Mono) you need to call the subscribe on it.
+
+
+## Sample
+
+==TODO==
+https://www.baeldung.com/spring-webflux
+https://www.callicoder.com/reactive-rest-apis-spring-webflux-reactive-mongo/ 
 
 
 -------------------------------------------------------------------------------
