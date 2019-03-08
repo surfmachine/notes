@@ -4,9 +4,8 @@ JavaScript
 [TOC]
 
 
-
 -------------------------------------------------------------------------------
-# Snippets
+# JavaScript Tricks 01/2019
 
 ## async / await
 
@@ -27,8 +26,6 @@ getData()
 
 > Note that await on the top level is not possible, you can only call an async function.
 async / await was introduced with ES2017, so make sure to transpile your code.
-
-_Reference: [JS-TIP-2019-01]_
 
 
 ## async control flow
@@ -63,9 +60,6 @@ function updateData(newData) {
     
 fetchData(myData)
 ```
-
-_Reference: [JS-TIP-2019-01]_
-
 
 ## Promise.all
 
@@ -102,7 +96,6 @@ fetchData(myData)
 
 > for...of and Promise.all were introduced with ES6+, so make sure to transpile your code.
 
-_Reference: [JS-TIP-2019-01]_
 
 ## Destructuring & default values
 
@@ -146,7 +139,6 @@ The example might seem a bit confusing at first, but take your time and play aro
 
 > Destructuring and default values were introduced with ES6, so make sure to transpile your code.
 
-_Reference: [JS-TIP-2019-01]_
 
 ## Truthy & falsy values
 
@@ -198,8 +190,6 @@ To really take advantage of these statements, you have to understand what truthy
 
 >Note that when checking for truthy / falsy values, there is no explicit comparison, which equates to checking with double equal signs == and not three ===. In general, it behaves the same way but there are certain situations where you will end up with a bug. For me, it happened mostly with the number 0.
 
-_Reference: [JS-TIP-2019-01]_
-
 
 ## Ternary operator
 The ternary operator is very similar to the logical operator, but has three parts:
@@ -215,8 +205,6 @@ console.log(lang ? 'Ja' : 'Yes') // Ja
 console.log(lang === 'French' ? 'Bon soir' : 'Good evening') // Good evening
 ```
 
-_Reference: [JS-TIP-2019-01]_
-
 
 ## Optional chaining
 Have you ever had the problem of accessing a nested object property, without knowing if the object or one of the sub-properties even exists? You will probably end up with something like this:
@@ -229,8 +217,6 @@ This is tedious and there’s a better way, at least a proposed way (keep readin
 I think it is an eloquent way of checking nested properties and makes the code way cleaner.
 
 >>Currently, optional chaining is not part of the official spec, but is at stage-1 as an experimental feature. You have to add @babel/plugin-proposal-optional-chaining in your babelrc to use it.
-
-_Reference: [JS-TIP-2019-01]_
 
 
 ## Class properties & binding
@@ -261,8 +247,14 @@ class Counter extends React.Component {
 
 >> Currently, class properties are not part of the official spec, but is at stage-3 as an experimental feature. You have to add @babel/plugin-proposal-class-properties in your babelrc to use it.
 
-_Reference: [JS-TIP-2019-01]_
 
+
+**Reference:**
+https://levelup.gitconnected.com/9-tricks-for-kickass-javascript-developers-in-2019-eb01dd3def2a?mkt_tok=eyJpIjoiT1RjelpERmlORE5qWlRRMiIsInQiOiJGRDRJdWs3SWdRQ1ZzUWdpdCtFVFk4M21McFNOMWRkKzJKRUkxUGdWNFRLYVJ2S3ZKd3dQUGlUQjZOWVR5SGNoUDhyMWFSTXNtY2ZMMHNJcXkwRTdHVGhrR2Z5cEVjXC9QU3czSXowaFlzNFZMK3EycUVzQjR6NWlCOXR1WGdrTGUifQ%3D%3D 
+
+
+-------------------------------------------------------------------------------
+# Language 
 
 ## var vs. let vs. const
 
@@ -289,29 +281,69 @@ person.name = 'Kim Kardashian West' // ✅
 person = {} // ❌ Assignment to constant variable.
 ```
 
+**Reference:**
+https://medium.freecodecamp.org/var-vs-let-vs-const-in-javascript-2954ae48c037?mkt_tok=eyJpIjoiT1RjelpERmlORE5qWlRRMiIsInQiOiJGRDRJdWs3SWdRQ1ZzUWdpdCtFVFk4M21McFNOMWRkKzJKRUkxUGdWNFRLYVJ2S3ZKd3dQUGlUQjZOWVR5SGNoUDhyMWFSTXNtY2ZMMHNJcXkwRTdHVGhrR2Z5cEVjXC9QU3czSXowaFlzNFZMK3EycUVzQjR6NWlCOXR1WGdrTGUifQ%3D%3D_
 
-_Reference: [JS-VAR-LET-CONST]_
-
-
-## ...
-```
-```
-## ...
-```
-```
 
 -------------------------------------------------------------------------------
-# References
+# CSS in JS 
 
-- [JS-TIP-2019-01] JavaScript Tricks 01/2019
-  https://levelup.gitconnected.com/9-tricks-for-kickass-javascript-developers-in-2019-eb01dd3def2a?mkt_tok=eyJpIjoiT1RjelpERmlORE5qWlRRMiIsInQiOiJGRDRJdWs3SWdRQ1ZzUWdpdCtFVFk4M21McFNOMWRkKzJKRUkxUGdWNFRLYVJ2S3ZKd3dQUGlUQjZOWVR5SGNoUDhyMWFSTXNtY2ZMMHNJcXkwRTdHVGhrR2Z5cEVjXC9QU3czSXowaFlzNFZMK3EycUVzQjR6NWlCOXR1WGdrTGUifQ%3D%3D 
+## React styled components
+
+**Sample 1:**
+```
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  color: palevioletred;
+  font-size: 18px;
+`
+
+const App = () => (
+  <Title>Hello World!</Title>
+)
+```
 
 
-- [JS-VAR-LET-CONST] JavaScript var vs. let vs. const
-  https://medium.freecodecamp.org/var-vs-let-vs-const-in-javascript-2954ae48c037?mkt_tok=eyJpIjoiT1RjelpERmlORE5qWlRRMiIsInQiOiJGRDRJdWs3SWdRQ1ZzUWdpdCtFVFk4M21McFNOMWRkKzJKRUkxUGdWNFRLYVJ2S3ZKd3dQUGlUQjZOWVR5SGNoUDhyMWFSTXNtY2ZMMHNJcXkwRTdHVGhrR2Z5cEVjXC9QU3czSXowaFlzNFZMK3EycUVzQjR6NWlCOXR1WGdrTGUifQ%3D%3D
+**Sample 2:**
+```
+// Create a Title component that'll render an <h1> tag with some styles
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
 
-- [JSON] Understanding JSON in JavaScript
-  https://itnext.io/understanding-json-in-javascript-5098876d0915?mkt_tok=eyJpIjoiTWpKbVkySmhNMk16TVRFMyIsInQiOiJ5MjA2cEY4T01SK2ZNZTgxdFFUXC9tT3JUdTBwb0RZZzVuR2I2QU00WloyQk01Mm55REVxN01Bd1RjNmZrZHQwUzVndGI5WDRIV3c2QVFyYVg3NEI5OGpBYU1OdVd1bEhwYTRMZFhuMjFUdTZaaE1Rd1lWeHZyTm9sQ0RYYlZmcEEifQ%3D%3D 
+// Create a Wrapper component that'll render a <section> tag with some styles
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
+
+// Use Title and Wrapper like any other React component – except they're styled!
+render(
+  <Wrapper>
+    <Title>
+      Hello World!
+    </Title>
+  </Wrapper>
+);
+```
+
+**References:**
+- Styled components
+  https://www.styled-components.com/
+
+- Why I Write CSS in JavaScript
+  https://mxstbr.com/thoughts/css-in-js/?utm_medium=email&utm_source=topic+optin&utm_campaign=awareness&utm_content=20190306+web+nl&mkt_tok=eyJpIjoiTjJRd01tUTFObVkzWmpSaCIsInQiOiJyY25hUTFcL2VDNndHQXpXSWJ0QW54ZHpGSkhMQzhYXC9XQk5Fbkl6ekdwNGl2M1JYOTNxbUQrRVY4Y0xGSmZsXC9sb1owV2tkS1VjdU5LeDljdFhpZ1Y1Ym9pUTRzUzFYa0h1K1ZCV0k0Y1pXR0t1Y2hqaHhTaG8yamhrSmdcL0RTXC9kIn0%3D
+
+
+-------------------------------------------------------------------------------
+# Misc
+
+## Understanding JSON in JavaScript
+
+https://itnext.io/understanding-json-in-javascript-5098876d0915?mkt_tok=eyJpIjoiTWpKbVkySmhNMk16TVRFMyIsInQiOiJ5MjA2cEY4T01SK2ZNZTgxdFFUXC9tT3JUdTBwb0RZZzVuR2I2QU00WloyQk01Mm55REVxN01Bd1RjNmZrZHQwUzVndGI5WDRIV3c2QVFyYVg3NEI5OGpBYU1OdVd1bEhwYTRMZFhuMjFUdTZaaE1Rd1lWeHZyTm9sQ0RYYlZmcEEifQ%3D%3D 
 
 -------------------------------------------------------------------------------
 _The end._

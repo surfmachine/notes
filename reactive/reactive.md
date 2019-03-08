@@ -11,16 +11,24 @@ Reactive Programming
 
 See: http://reactivex.io/intro.html
 
-Subscribe:
+## Introduction notes
+
+
+### Synonyms
+
+- Publisher / Subcriber 
+- Source    / Sink
+
+### Subscribe
 - onNext (0..n times)
 - onCompleted or onError (1 time) 
  
-Unsubscribing:
+### Unsubscribing
 - unsubscribe methode
 - The results of this unsubscription will cascade back through the chain of operators that applies to theObservable that the observer subscribed to, and this will cause each link in the chain to stop emitting items
 
 
-Hot, Cold and Connectable Observers:
+### Hot, Cold and Connectable Observers
 - A “hot” Observable may begin emitting items as soon as it is created, and so any observer who later subscribes to thatObservable may start observing the sequence somewhere in the middle. 
 
 - A “cold” Observable, on theother hand, waits until an observer subscribes to it before it begins to emit items, and so such an observer isguaranteed to see the whole sequence from the beginning. 
@@ -150,9 +158,20 @@ See: http://reactivex.io/documentation/scheduler.html
 -------------------------------------------------------------------------------
 # JavaRx
 
-==TODO==
+
+## TODO Buch
+- Flow, S.14/15
+
+
+## TODO Reactive
 - https://github.com/ReactiveX/RxJava/wiki/How-To-Use-RxJava 
 - https://www.pluralsight.com/courses/reactive-programming-java-8-rxjava
+
+
+
+
+
+
 
 
 -------------------------------------------------------------------------------
@@ -167,8 +186,14 @@ See: http://reactivex.io/documentation/scheduler.html
 - Introduction to Rx
   http://introtorx.com/ 
 
+- "Reactive Streams in Java" Code Samples 
+  https://github.com/Apress/reactive-streams-in-java  
+
 - Tutorials
   http://reactivex.io/tutorials.html 
+
+  Practical RxJava (cool Presentation)
+  https://www.jfokus.se/jfokus16/preso/PracticalRxJava.pdf   
 
 
 -------------------------------------------------------------------------------
