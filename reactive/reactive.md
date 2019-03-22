@@ -218,7 +218,12 @@ The implementations support operators like map, filter, reduce, and flatMap whic
 ==TODO==
 https://www.baeldung.com/spring-webflux
 https://www.callicoder.com/reactive-rest-apis-spring-webflux-reactive-mongo/ 
+https://developer.okta.com/blog/2018/09/24/reactive-apis-with-spring-webflux
 
+https://www.codingame.com/playgrounds/43568/basics-of-recursive-programming-recitation/review
+
+
+https://dev.to/stealthmusic/dont-drink-too-much-reactive-cool-aid-20lk
 
 -------------------------------------------------------------------------------
 # References
