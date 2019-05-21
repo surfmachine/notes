@@ -1,3 +1,9 @@
+
+#
+# Exercise
+# Add "Jake" to the phonebook with the phone number 938273443, and remove Jill from the phonebook.
+#
+
 phonebook = {
     "John" : 938477566,
     "Jack" : 938377264,
