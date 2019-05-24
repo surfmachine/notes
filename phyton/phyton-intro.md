@@ -1,4 +1,4 @@
-Phyton
+Phyton Introduction
 ===============================================================================
 
 [TOC]
@@ -6,8 +6,12 @@ Phyton
 -------------------------------------------------------------------------------
 # Basics
 
+**Phyton 3**
+https://docs.python.org/3/library/index.html
+
 **Tutorial**
 - https://www.learnpython.org 
+- https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials
 
 
 ## Functions
@@ -416,6 +420,261 @@ print(words)
 print(word_lengths)
 ```
 
+## Multiple Function Arguments and Arguments by keyword
+
+**Multiple Function Arguments**
+It is possible to declare functions which receive a variable number of arguments, using the following syntax: __*args__
+```
+def foo(first, second, third, *therest):
+    print("First: %s" %(first))
+    print("Second: %s" %(second))
+    print("Third: %s" %(third))
+    print("And all the rest... %s" %(list(therest)))
+
+foo(1,2,3,4,5)
+```
+
+>The "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments.
+
+**Arguments by keyword**
+It is also possible to send functions arguments by keyword, so that the order of the argument does not matter, using the following syntax: __**args__
+```
+def bar(first, second, third, **options):
+    if options.get("action") == "sum":
+        print("The sum is: %d" %(first + second + third))
+
+    if options.get("number") == "first":
+        return first
+
+result = bar(1, 2, 3, action = "sum", number = "first")
+print("Result: %d" %(result))
+```
+
+>The following code yields the following output: The sum is: 6 Result: 1
+
+
+## Regular Expressions
+
+**Reference**
+https://docs.python.org/3/library/re.html#regular-expression-syntax%22RE%20syntax 
+
+**Sample**
+```
+import re
+pattern = re.compile(r"\[(on|off)\]") # Slight optimization
+print(re.search(pattern, "Mono: Playback 65 [75%] [-16.50dB] [on]"))
+# Returns a Match object!
+print(re.search(pattern, "Nada...:-("))
+# Doesn't return anything.
+# End Example
+```
+
+
+**Email sample**
+```
+# Exercise: make a regular expression that will match an email
+import re
+
+def test_email(your_pattern):
+    pattern = re.compile(your_pattern)
+    emails = ["john@example.com", "python-list@python.org", "wha.t.`1an?ug{}ly@email.com"]
+    for email in emails:
+        if not re.match(pattern, email):
+            print("You failed to match %s" % (email))
+        elif not your_pattern:
+            print("Forgot to enter a pattern!")
+        else:
+            print("Pass")
+
+# Your pattern here!
+pattern = r"\"?([-a-zA-Z0-9.`?{}]+@\w+\.\w+)\"?"
+test_email(pattern)
+```
+
+## Exception Handling
+
+**Reference**
+https://docs.python.org/3/tutorial/errors.html#handling-exceptions
+
+**Sample**
+```
+while True:
+    try:
+         x = int(input("Please enter a number: "))
+         break
+     except ValueError:
+         print("Oops!  That was no valid number.  Try again...")
+```
+
+**Multicatch**
+```
+except (RuntimeError, TypeError, NameError):
+    ...
+```
+
+**Catch all**
+```
+import sys
+
+try:
+    f = open('myfile.txt')
+    s = f.readline()
+    i = int(s.strip())
+except OSError as err:
+    print("OS error: {0}".format(err))
+except ValueError:
+    print("Could not convert data to an integer.")
+except:
+    print("Unexpected error:", sys.exc_info()[0])
+    raise
+```
+
+## Sets & set operations (diff, intersection, etc.)
+
+Sets are lists with no duplicate entries.
+```
+uniqueWords = set("my name is Eric and Eric is my name".split())
+print(uniqueWords)
+```
+> Result:
+> {'is', 'Eric', 'and', 'name', 'my'}
+
+**Intersection**
+o find out which members attended both events, you may use the "intersection" method:
+```
+a = set(["Jake", "John", "Eric"])
+b = set(["John", "Jill"])
+
+print(a.intersection(b))
+print(b.intersection(a))
+```
+
+**Symmetric difference**
+To find out which members attended only one of the events, use the "symmetric_difference" method:
+```
+a = set(["Jake", "John", "Eric"])
+b = set(["John", "Jill"])
+
+print(a.symmetric_difference(b))
+print(b.symmetric_difference(a))
+```
+
+**Difference**
+To find out which members attended only one event and not the other, use the "difference" method:
+```
+a = set(["Jake", "John", "Eric"])
+b = set(["John", "Jill"])
+
+print(a.difference(b))
+print(b.difference(a))
+```
+
+**Union**
+To receive a list of all participants, use the "union" method:
+```
+a = set(["Jake", "John", "Eric"])
+b = set(["John", "Jill"])
+
+print(a.union(b))
+```
+
+## Serialization (JSON)
+
+Python provides built-in JSON libraries to encode and decode JSON.
+
+In Python 2.5, the simplejson module is used, whereas in Python 2.7, the json module is used. Since this interpreter uses Python 2.7, we'll be using json.
+
+**Import**
+In order to use the json module, it must first be imported:
+```
+import json
+```
+
+**Formats**
+There are two basic formats for JSON data. 
+- string:
+The String format is mainly used to pass the data into another program or load into a datastructure.
+
+- object datastructure:
+The object datastructure, in Python, consists of lists and dictionaries nested inside each other. The object datastructure allows one to use python methods (for lists and dictionaries) to add, list, search and remove elements from the datastructure. 
+
+**Load**
+To load JSON back to a data structure, use the "loads" method. This method takes a string and turns it back into the json object datastructure:
+```
+import json 
+...
+print(json.loads(json_string))
+```
+
+**Dump**
+To encode a data structure to JSON, use the "dumps" method. This method takes an object and returns a String:
+```
+import json
+json_string = json.dumps([1, 2, 3, "a", "b", "c"])
+print(json_string)
+```
+
+## Partial functions
+
+You can create partial functions in python by using the partial function from the functools library.
+
+> Partial functions allow one to derive a function with x parameters to a function with fewer parameters and fixed values set for the more limited function.
+
+**Import required**
+```
+from functools import partial
+```
+
+****
+```
+from functools import partial
+
+def multiply(x,y):
+        return x * y
+
+# create a new function that multiplies by 2 (replace x with 2)
+dbl = partial(multiply,2)   
+print(dbl(4))
+```
+
+> An important note: the default values will start replacing variables from the left. The 2 will replace x. y will equal 4 when dbl(4) is called. It does not make a difference in this example, but it does in the example below.
+
+
+## Code Introspection
+
+Code introspection is the ability to examine classes, functions and keywords to know what they are, what they do and what they know.
+
+**Python provides several functions and utilities for code introspection**
+```
+help()
+dir() 
+hasattr() 
+id() 
+type() 
+repr() 
+callable() 
+issubclass() 
+isinstance() 
+__doc__ 
+__name__
+```
+
+Often the most important one is the help function, since you can use it to find what other functions do:
+> help(dir)
+> help(hasattr)
+> help(id)
+
+## Closures
+
+****
+```
+
+```
+
+****
+```
+
+```
 
 
 
