@@ -1,4 +1,4 @@
-Phyton Introduction
+Phyton Intro
 ===============================================================================
 
 [TOC]
@@ -666,17 +666,154 @@ Often the most important one is the help function, since you can use it to find 
 
 ## Closures
 
-****
+A Closure is a function object that remembers values in enclosing scopes even if they are not present in memory. Let us get to it step by step
+
+**Nested Function**
+Firstly, a Nested Function is a function defined inside another function. 
+```
+def transmit_to_space(message):
+    "This is the enclosing function"
+
+    def data_transmitter():
+        "The nested function"
+        print(message)
+
+    data_transmitter()
+
+transmit_to_space("Test message")
 ```
 
+
+**nonlocal**
+It's very important to note that the nested functions can access the variables of the enclosing scope. However, at least in python, they are only readonly. However, one can use the "nonlocal" keyword explicitly with these variables in order to modify them.
+```
+def print_msg(number):
+    def printer():
+        "Here we are using the nonlocal keyword"
+        nonlocal number
+        number=3
+        print(number)
+
+    printer()
+    print(number)
+
+print_msg(9)
+```
+> Without the nonlocal keyword, the output would be "3 9", however, with its usage, we get "3 3", that is the value of the "number" variable gets modified. 
+
+**return a function**
+Now, how about we return the function object rather than calling the nested function within (remember that even functions are objects in Python).
+
+
+```
+def transmit_to_space(message):
+    "This is the enclosing function"
+    def data_transmitter():
+        "The nested function"
+        print(message)
+    
+    return data_transmitter
+
+fun2 = transmit_to_space("Burn the Sun!")
+fun2()
 ```
 
-****
+Even though the execution of the "transmit_to_space()" was completed, the message was rather preserved. This technique by which the data is attached to some code even after end of those other original functions is called as closures in python
+
+> ADVANTAGE : Closures can avoid use of global variables and provides some form of data hiding.(Eg. When there are few methods in a class, use closures instead).
+
+Also, Decorators in Python make extensive use of closures.
+
+
+## Decorators
+
+### Syntax /  Function
+
+**Syntax**
+Decorators allow you to make simple modifications to callable objects like functions, methods, or classes. We shall deal with functions for this tutorial. 
+
+The syntax:
+```
+@decorator
+def functions(arg):
+    return "value"
+
+# Is equivalent to:
+def function(arg):
+    return "value"
+function = decorator(function) 
+```
+> this passes the function to the decorator, and reassigns it to the functions
+
+**Function**
+As you may have seen, a decorator is just another function which takes a functions and returns one. For example you could do this:
+```
+def repeater(old_function):
+    def new_function(*args, **kwds): 
+        old_function(*args, **kwds) # we run the old function
+        old_function(*args, **kwds) # we do it twice
+    
+    return new_function # we have to return the new_function, or it wouldn't reassign it to the value
 ```
 
+### Samples
+
+**Repeat a function twice**
+```
+@repeater
+def multiply(num1, num2):
+    print(num1 * num2)
+
+>>> multiply(2, 3)
+6
+6
 ```
 
+**Change output**
+You can also make it change the output
+```
+def double_out(old_function):
+    def new_function(*args, **kwds):
+        return 2 * old_function(*args, **kwds) # modify the return value
+    return new_function
+```
 
+**Change input**
+```
+def double_Ii(old_function):
+    def new_function(arg): # only works if the old function has one argument
+        return old_function(arg * 2) # modify the argument passed
+    return new_function
+```
+
+**Do checking**
+```
+def check(old_function):
+    def new_function(arg):
+        if arg < 0: raise (ValueError, "Negative Argument") # This causes an error, which is better than it doing the wrong thing
+        old_function(arg)
+    
+    return new_function
+```
+
+**Multiply output by a variable amount**
+Let's say you want to multiply the output by a variable amount. You could define the decorator and use it as follows:
+```
+def multiply(multiplier):
+    def multiply_generator(old_function):
+        def new_function(*args, **kwds):
+            return multiplier * old_function(*args, **kwds)
+        return new_function
+    return multiply_generator # it returns the new generator
+
+# Usage
+@multiply(3) # multiply is not a generator, but multiply(3) is
+def return_num(num):
+    return num
+
+# Now return_num is decorated and reassigned into itself
+return_num(5) # should return 15
+```
 
 -------------------------------------------------------------------------------
 _The end._
