@@ -11,6 +11,15 @@ Eclipse MicroProfile
 - Artikel http://wiki.eclipse.org/MicroProfile/Articles
 - Präsentationen http://wiki.eclipse.org/MicroProfile/Presentations
 
+
+-------------------------------------------------------------------------------
+# Azure
+
+- Azure Sidecar Pattern
+https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar
+
+
+
 -------------------------------------------------------------------------------
 # Referenzen
 
@@ -36,6 +45,17 @@ https://www.heise.de/developer/meldung/Microservices-Eclipse-MicroProfile-1-1-ba
 
 - Developing REST APIs
 https://dzone.com/articles/developing-rest-apis?edition=451206&utm_source=Zone%20Newsletter&utm_medium=email&utm_campaign=integration%202019-02-07
+
+
+## Side Car Pattern
+
+- Distributed Systems and the Sidecar Pattern Sample with Node und Kubernetes
+  https://dzone.com/articles/distributed-systems-sidecar-pattern
+  https://github.com/EwanValentine/distributed-patterns 
+
+- Side Car Design Pattern
+  https://dzone.com/articles/sidecar-design-pattern-in-your-microservices-ecosy-1?edition=485316&utm_source=Weekly%20Digest&utm_medium=email&utm_campaign=Weekly%20Digest%202019-06-05
+
 
 
 _The end._
