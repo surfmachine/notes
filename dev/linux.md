@@ -32,6 +32,9 @@ find /lib* /usr/lib* -name "libgs.so" | find nach installierter Library
 ldconfig -p | grep libgs.so           | find nach installierter Library
 cp `ls -SF | grep -v / | head -5` [target-dir] | copy mit Resultaten aus Pipe Abfrage
   
+File Encoding:
+https://www.shellhacks.com/linux-check-change-file-encoding/
+
 
 ## Permission, Owner, Groups
 
