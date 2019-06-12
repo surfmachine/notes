@@ -228,8 +228,33 @@ https://dev.to/stealthmusic/dont-drink-too-much-reactive-cool-aid-20lk
 -------------------------------------------------------------------------------
 # References
 
+## Reactive
+- Reactive Manifesto
+  https://www.reactivemanifesto.org/ 
+
 - ReactiveX
   http://reactivex.io 
+
+- ReactiveX Operatoren
+  http://reactivex.io/documentation/operators.html   
+
+
+
+## Implementationen
+- Spring Reactive Stack
+  https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html 
+  
+- ReactiveX (diveres Sprachen)
+  https://github.com/ReactiveX 
+  
+- ReactiveX RxJava
+  https://github.com/ReactiveX/RxJava   
+  
+- Akka  
+  https://akka.io/  
+
+
+## Workshops & Tutorials
 
 - Rx Workshop
   https://channel9.msdn.com/Series/Rx-Workshop/Rx-Workshop-Introduction 
@@ -245,6 +270,28 @@ https://dev.to/stealthmusic/dont-drink-too-much-reactive-cool-aid-20lk
 
   Practical RxJava (cool Presentation)
   https://www.jfokus.se/jfokus16/preso/PracticalRxJava.pdf   
+
+
+## Artikel
+
+- Reactive Pro and Contra
+  https://dev.to/stealthmusic/dont-drink-too-much-reactive-cool-aid-20lk 
+
+- Spring Reactive Performance
+  https://medium.com/@the.raj.saxena/springboot-2-performance-servlet-stack-vs-webflux-reactive-stack-528ad5e9dadc   
+
+- Spring Blocking vs Non-Blocking I/O
+
+
+## Spring WebFlux 
+- https://stackoverflow.com/questions/52244808/backpressure-mechanism-in-spring-web-flux 
+
+- https://github.com/spring-projects/spring-framework/blob/master/spring-webflux/src/test/java/org/springframework/web/reactive/result/method/annotation/MultipartIntegrationTests.java 
+
+
+## Lightbend Reactive Architecture
+- Free Course 6 Module à 5-8h
+- https://www.lightbend.com/learn/lightbend-reactive-architecture 
 
 
 -------------------------------------------------------------------------------
