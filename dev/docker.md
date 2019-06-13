@@ -147,9 +147,11 @@ Command                       | Description
 
 ## Kubernetes
 
-### Cheat Sheet
+- Documentation
+  https://kubernetes.io/docs/home/
 
-https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+- Cheat Sheet
+  https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
 
 ### KubeCtl samples
@@ -160,6 +162,9 @@ https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 - kubectl delete pod [pod] -n [namespace]
 - kubectl describe pods [pod] -n [namespace]
 
+- kubectl create -f target/app.yaml
+- kubectl get pods
+- kubectl logs [pod]
 
 ### Resources
 
@@ -224,6 +229,24 @@ spec:
         cpu: "500m"
 ```
 
+## Minikube
+
+- Installation
+  https://kubernetes.io/docs/tasks/tools/install-minikube/
+
+### Use internal Docker instance
+
+Use internal docker instance of Minikube from the shell:
+> eval $(minikube docker-env)
+- Now when you invoke the docker client, it will connect to the Docker runningin the Minikube virtual machine.
+- Note: This is configured only in your current shell session; it's not a permanent change.
+
+### Show NodePort
+
+- A service can be accessed through it's external IP address. This is one type of service providing external access th services running in the cluster.
+- Another type is NodePort, which this service is using. A node port exposes the service on a mapped port across all of the cluster nodes.
+- To retrieve the service access URL, use the following Minikube command
+> minikube service [my-service] -url
 
 
 
