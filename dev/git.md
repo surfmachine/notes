@@ -62,6 +62,26 @@ git remote -v                               | remote repo list existing url's
 git remote add origin [URL]                 | remote repo add new url
 
 
+## Credentials
+
+**SSH approach**
+See https://unix.stackexchange.com/questions/335704/how-to-set-up-username-and-passwords-for-different-git-repos
+
+
+**Using gitcredentials**
+If the SSH approach doesn't apply (e.g. you're using a repository accessed over HTTPS), git does have its own way of handling credentials, using gitcredentials (and typically git-credential-store). 
+
+You specify your username using:
+> git config credential.${remote}.username yourusername
+
+and the credential helper using:
+> git config credential.helper store
+
+Note: 
+> specify **--global** if you want to use this setup everywhere
+
+Then the first time you access a repository, git will ask for your password, and it will be stored (by default in ~/.git-credentials). Subsequent accesses to the repository will use the stored password instead of asking you.
+
 ## .gitignore
 - add files, directories which should be ignored by git.
 - edit file (with nano or similar) and commit to repository.
@@ -71,6 +91,7 @@ git remote add origin [URL]                 | remote repo add new url
 - https://backlog.com/git-tutorial/en/stepup/stepup2_5.html
 - https://git-scm.com/docs/git-merge
 - https://www.atlassian.com/git/tutorials/using-branches/git-merge
+- https://unix.stackexchange.com/questions/335704/how-to-set-up-username-and-passwords-for-different-git-repos
 
 
 -------------------------------------------------------------------------------
