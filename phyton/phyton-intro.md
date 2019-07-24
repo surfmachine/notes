@@ -816,5 +816,28 @@ return_num(5) # should return 15
 ```
 
 -------------------------------------------------------------------------------
+# Conda
+
+>> Execute command within the Anaconda Shell!
+
+## Environment 
+
+Command                              | Description
+------------------------------------ | ---------------------------------------- 
+conda info --envs                    | Show environments
+conda create -n myenv phython=3.6.2  | Create environment with given phyton version
+conda activate myenv                 | Activate the myenv environment
+conda list                           | Show packages of active environment
+
+
+
+-------------------------------------------------------------------------------
+# Azure
+
+- Create an Azure Machine Learning service workspace 
+  https://docs.microsoft.com/en-us/azure/machine-learning/service/setup-create-workspace#sdk
+
+
+-------------------------------------------------------------------------------
 _The end._
 

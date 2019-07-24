@@ -107,7 +107,7 @@ git clone [repo-url] [dir]    | clone remote repo to local disk into specific fo
 ## Create local repo
 Command                       | Description
 ----------------------------- | -----------------------------------------------
-change into to directory      | change to your existing project directory
+change into directory         | change to your existing project directory
 git init                      | init git
 git add .                     | add current directory
 git commit -m "Inital commit."| commit your changs to the local repository

@@ -47,6 +47,8 @@ docker-machine stop default       | docker vm stop
 Command                           | Description
 --------------------------------- | -------------------------------------------
 docker images                     | show images in the local repository
+docker image list                 | show images in the local repository
+docker pull [repository]          | download image from repository
 docker run [image-id]             | start image latest
 docker run [image-id]:[tag]       | start image with given tag
 docker stop [image-id]            | stop image
