@@ -256,6 +256,11 @@ https://levelup.gitconnected.com/9-tricks-for-kickass-javascript-developers-in-2
 -------------------------------------------------------------------------------
 # Language 
 
+## JavaScript Standard Style
+
+- https://standardjs.com
+
+
 ## var vs. let vs. const
 
 var: 
@@ -283,6 +288,17 @@ person = {} // ❌ Assignment to constant variable.
 
 **Reference:**
 https://medium.freecodecamp.org/var-vs-let-vs-const-in-javascript-2954ae48c037?mkt_tok=eyJpIjoiT1RjelpERmlORE5qWlRRMiIsInQiOiJGRDRJdWs3SWdRQ1ZzUWdpdCtFVFk4M21McFNOMWRkKzJKRUkxUGdWNFRLYVJ2S3ZKd3dQUGlUQjZOWVR5SGNoUDhyMWFSTXNtY2ZMMHNJcXkwRTdHVGhrR2Z5cEVjXC9QU3czSXowaFlzNFZMK3EycUVzQjR6NWlCOXR1WGdrTGUifQ%3D%3D_
+
+
+## object spread operator {...obj} vs. Object.assign
+
+
+
+**Reference:**
+- https://thecodebarbarian.com/object-assign-vs-object-spread.html
+- https://stackoverflow.com/questions/32925460/object-spread-vs-object-assign
+
+
 
 
 -------------------------------------------------------------------------------
