@@ -12,6 +12,18 @@ https://docs.python.org/3/library/index.html
 **Tutorial**
 - https://www.learnpython.org 
 - https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials
+- https://www.geeksforgeeks.org/constructors-in-python/
+
+
+**Machine Learning**
+- Building package for machine learning project in Python
+  https://towardsdatascience.com/building-package-for-machine-learning-project-in-python-3fc16f541693
+
+- Command Line Interface with docopt
+  http://docopt.org/   
+
+- Project Structure for ML Projects
+  https://towardsdatascience.com/manage-your-data-science-project-structure-in-early-stage-95f91d4d0600
 
 
 ## Functions
@@ -33,7 +45,8 @@ print (res)
 ```
 
 ## Classes & Objects
-Sample:
+
+### Sample 
 ```
 class MyClass:
     variable = "blah"
@@ -53,6 +66,67 @@ print(myobjecty.variable)
 # call a object function
 myobjectx.function()
 ```
+
+### Constructor
+
+Types of constructors :
+
+- default constructor :The default constructor is simple constructor which doesn’t accept any arguments.It’s definition has only one argument which is a reference to the instance being constructed.
+
+- parameterized constructor :constructor with parameters is known as parameterized constructor.The parameterized constructor take its first argument as a reference to the instance being constructed known as self and the rest of the arguments are provided by the programmer.
+
+Default consturctor:
+```
+class GeekforGeeks: 
+	geek = "" 
+
+	# default constructor 
+	def __init__(self): 
+		self.geek = "GeekforGeeks"
+
+	# a method for printing data members 
+	def print_Geek(self): 
+		print(self.geek) 
+
+
+# creating object of the class 
+obj = GeekforGeeks() 
+
+# calling the instance method using the object obj 
+obj.print_Geek() 
+```
+
+Parameterized constructor:
+```
+class Addition: 
+    first = 0
+    second = 0
+    answer = 0
+      
+    # parameterized constructor 
+    def __init__(self, f, s): 
+        self.first = f 
+        self.second = s 
+      
+    def display(self): 
+        print("First number = " + str(self.first)) 
+        print("Second number = " + str(self.second)) 
+        print("Addition of two numbers = " + str(self.answer)) 
+  
+    def calculate(self): 
+        self.answer = self.first + self.second 
+  
+# creating object of the class 
+# this will invoke parameterized constructor 
+obj = Addition(1000, 2000) 
+  
+# perform Addition 
+obj.calculate() 
+  
+# display result 
+obj.display() 
+```
+
 
 ## Dictionaries
 
@@ -217,6 +291,19 @@ The __init__.py file can also decide which modules the package exports as the AP
 __init__.py:
 
 __all__ = ["bar"]
+```
+
+Sample __init__.py:
+There is a package (directory) with some phyton scripts. Now we want
+only export the following two classes:
+```
+from mlp.dataset import Dataset
+from mlp.model import DumbModel
+```
+
+Know we can import the classes like this:
+```
+from mlp import Dataset, DumbModel
 ```
 
 -------------------------------------------------------------------------------
