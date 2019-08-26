@@ -320,7 +320,15 @@ npm_show_webpack                     |  zeigt die möglichen Versionen vom webpa
 
 
 -------------------------------------------------------------------------------
-# More References
+# Development Refernces
+
+- The Front-End Checklist
+  https://frontendchecklist.io/
+
+
+- Google Earth
+https://web.dev/earth-webassembly/?utm_medium=email&utm_source=topic+optin&utm_campaign=awareness&utm_content=20190703+web+nl&mkt_tok=eyJpIjoiTkRJMVlqY3dNelkyWm1RMiIsInQiOiJickxvbFhvMVlsYmdlRlo0Y2lJUVIxWXRrZXQ2OEZ1Unc0Zmh3RDRWMFZnanZXYUlRSCtNUXhQNXpZS011XC9jaXpObDY5Q0RCRFZ3WjNsdG8xUlcwQU5yanp3UW5wMG16U3V0eGtqNWFFYmw5dFVmYmNZN1wvckppcTlVQnRvVTBjIn0%3D
+  
 
 - Online Course
   https://www.codeschool.com
