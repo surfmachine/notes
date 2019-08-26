@@ -15,6 +15,20 @@ NLP and NLTK (NL Toolkit)
 Naural Language Toolkit
 
 
+## NLTK
+
+### Function Overview
+
+Show all functions of the package nltk:
+```
+dir(nltk)
+```
+
+Some functions to look at:
+- pos_tag (paras speach tagging)
+- tokenize 
+
+
 -------------------------------------------------------------------------------
 _The end._
 

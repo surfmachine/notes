@@ -357,13 +357,22 @@ render(
 -------------------------------------------------------------------------------
 # Misc
 
-## Understanding JSON in JavaScript
+## JS Guides
+https://vanillajsguides.com/complete-set/ 
 
+## JS Book
+https://eloquentjavascript.net/ 
+
+## JS Higher order functions
+https://jrsinclair.com/articles/2019/what-is-a-higher-order-function-and-why-should-anyone-care/ 
+
+## JS  Design Pattern
+https://addyosmani.com/resources/essentialjsdesignpatterns/book/#commandpatternjavascript
+
+## Understanding JSON in JavaScript
 https://itnext.io/understanding-json-in-javascript-5098876d0915?mkt_tok=eyJpIjoiTWpKbVkySmhNMk16TVRFMyIsInQiOiJ5MjA2cEY4T01SK2ZNZTgxdFFUXC9tT3JUdTBwb0RZZzVuR2I2QU00WloyQk01Mm55REVxN01Bd1RjNmZrZHQwUzVndGI5WDRIV3c2QVFyYVg3NEI5OGpBYU1OdVd1bEhwYTRMZFhuMjFUdTZaaE1Rd1lWeHZyTm9sQ0RYYlZmcEEifQ%3D%3D 
 
-
 ## 8 useful CSS tricks: Parallax images, sticky footers and more
-
 https://medium.com/@bretcameron/parallax-images-sticky-footers-and-more-8-useful-css-tricks-eef12418f676?utm_medium=email&utm_source=topic+optin&utm_campaign=awareness&utm_content=20190313+web+nl&mkt_tok=eyJpIjoiTm1ReFpqQTROR1E0TjJOaCIsInQiOiJ5WHdaMHhNYmtDalwvMmdLXC9FZWdOT3NuWE5LSVFtV1EzQXF2anRwSTk0ZkJwaWNLV0dQR3gwMHdZXC9ndUJ0R0JFQ1kxYWJUV0g2SUxEQzFmczlWakRMRmxybG01akU3dmpqaFdIcjA4ZWRlV1VOUlBcL3VFcVkrMDVLc0xRVE5cLytQIn0%3D
 
 
