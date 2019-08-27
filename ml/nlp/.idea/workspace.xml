@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccafd00f-5e3c-46ac-95c4-93de41bc03e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../phyton/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/arguments-excercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/arguments-solution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/classes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/closures-exercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/closures-solution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/closures.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/decorator-exercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/decorator-solution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/dictionary.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/exception-example.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/generators-exercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/generators-solution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/introspection-exercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/introspection-solution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/json-exercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/json-solution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/list-comprehension-excercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/loops.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/numpy-example.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/numpy-exercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/pandas-example.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/partial-function-exercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/partial-function-solution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/set-exercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/intro/set-solution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/phyton-intro.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/phyton.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../phyton/work.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise Files/Ch04/04_03/End/04_03.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exercise Files/Ch04/04_03/End/04_03.ipynb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +17,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Exercise Files/Ch05/05_05/End/05_05.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Exercise Files/Ch03/03_03/End/03_03.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Exercise Files/Ch04/04_03/End/04_03.ipynb">
           <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
@@ -72,9 +51,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="246" />
-    <option name="y" value="21" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="149" />
+    <option name="y" value="89" />
     <option name="width" value="1618" />
     <option name="height" value="966" />
   </component>
@@ -85,6 +64,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,11 +72,64 @@
               <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
               <item name="nlp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch03" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch03" type="462c0819:PsiDirectoryNode" />
+              <item name="03_03" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch03" type="462c0819:PsiDirectoryNode" />
+              <item name="03_03" type="462c0819:PsiDirectoryNode" />
+              <item name="End" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch04" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch04" type="462c0819:PsiDirectoryNode" />
+              <item name="04_02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch04" type="462c0819:PsiDirectoryNode" />
+              <item name="04_03" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch04" type="462c0819:PsiDirectoryNode" />
+              <item name="04_03" type="462c0819:PsiDirectoryNode" />
+              <item name="End" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -160,16 +193,27 @@
       <workItem from="1566802690689" duration="601000" />
       <workItem from="1566806465033" duration="1479000" />
       <workItem from="1566808071550" duration="16478000" />
+      <workItem from="1566830077507" duration="794000" />
+      <workItem from="1566884539530" duration="4380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18558000" />
+    <option name="totallyTimeSpent" value="23732000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="246" y="21" width="1618" height="966" extended-state="0" />
+    <frame x="149" y="89" width="1618" height="966" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18998717" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19512194" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -177,23 +221,23 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Azure Explorer" order="7" />
-      <window_info anchor="bottom" id="Jupyter" visible="true" weight="0.32839507" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3298153" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32962963" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32962963" />
-      <window_info anchor="bottom" id="Docker" order="8" />
+      <window_info anchor="bottom" id="Docker" order="8" weight="0.32962963" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="10" />
+      <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="10" weight="0.23333333" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Azure Activity Log" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32962963" />
+      <window_info anchor="bottom" id="Azure Activity Log" order="13" weight="0.32962963" />
       <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="14" />
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="15" />
+      <window_info active="true" anchor="bottom" id="Jupyter" order="16" visible="true" weight="0.32839507" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -256,9 +300,6 @@
     <entry file="file://$PROJECT_DIR$/Exercise Files/Ch03/03_02/Start/03_02.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exercise Files/Ch03/03_03/End/03_03.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Exercise Files/Ch03/03_03/Start/03_03.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
@@ -274,9 +315,6 @@
     <entry file="file://$PROJECT_DIR$/Exercise Files/Ch04/04_02/Start/04_02.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exercise Files/Ch04/04_03/End/04_03.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Exercise Files/Ch04/04_04/End/04_04.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
@@ -287,6 +325,12 @@
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Exercise Files/Ch05/05_05/End/05_05.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise Files/Ch03/03_03/End/03_03.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise Files/Ch04/04_03/End/04_03.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
   </component>
