@@ -366,6 +366,9 @@ https://eloquentjavascript.net/
 ## JS Higher order functions
 https://jrsinclair.com/articles/2019/what-is-a-higher-order-function-and-why-should-anyone-care/ 
 
+## JS [undefined, null, NaN].sort();
+https://hackernoon.com/how-not-to-sort-an-array-in-javascript-5t2a32av4?utm_medium=email&utm_source=topic+optin&utm_campaign=awareness&utm_content=20190831+prog+nl&mkt_tok=eyJpIjoiTVRVeE9HUTFOemd3TURVNSIsInQiOiJzS1VsMGdhRjNSSmtHSHFXSzVNWTFBWEIwaE8ydlBEU285dEdmZW0wVENcL1VlZnNWNVZ5dVBKQXN3S2t3aVRHNnM3eVlDTXRpcUJlV2tpaVJJeDZtWGRyd2NUWUlESWdqSmhMRmxqYnRyYUU3ZUt6XC9iTW9JTHZSSDl4SE44NDBnIn0%3D 
+
 ## JS  Design Pattern
 https://addyosmani.com/resources/essentialjsdesignpatterns/book/#commandpatternjavascript
 
