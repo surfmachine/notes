@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ccafd00f-5e3c-46ac-95c4-93de41bc03e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercise Files/Ch04/04_03/End/04_03.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exercise Files/Ch04/04_03/End/04_03.ipynb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +26,18 @@
           <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Exercise Files/Ch04/04_03/End/04_03.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Exercise Files/Ch01/01_02/End/01_02.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Exercise Files/Ch01/01_03/End/01_03.ipynb">
           <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
@@ -52,9 +61,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="149" />
-    <option name="y" value="89" />
-    <option name="width" value="1618" />
+    <option name="x" value="479" />
+    <option name="y" value="38" />
+    <option name="width" value="1368" />
     <option name="height" value="966" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -64,7 +73,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -76,6 +84,42 @@
               <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
               <item name="nlp" type="462c0819:PsiDirectoryNode" />
               <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch01" type="462c0819:PsiDirectoryNode" />
+              <item name="01_02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch01" type="462c0819:PsiDirectoryNode" />
+              <item name="01_02" type="462c0819:PsiDirectoryNode" />
+              <item name="End" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch01" type="462c0819:PsiDirectoryNode" />
+              <item name="01_03" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch01" type="462c0819:PsiDirectoryNode" />
+              <item name="01_03" type="462c0819:PsiDirectoryNode" />
+              <item name="End" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
@@ -130,6 +174,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -195,11 +240,14 @@
       <workItem from="1566808071550" duration="16478000" />
       <workItem from="1566830077507" duration="794000" />
       <workItem from="1566884539530" duration="4380000" />
+      <workItem from="1567406330837" duration="1382000" />
+      <workItem from="1567417363696" duration="469000" />
+      <workItem from="1567433645422" duration="747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23732000" />
+    <option name="totallyTimeSpent" value="26330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -211,9 +259,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="149" y="89" width="1618" height="966" extended-state="0" />
+    <frame x="479" y="38" width="1368" height="966" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19512194" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24159022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -258,9 +307,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/nlp.ipynb" />
-    <entry file="file://$PROJECT_DIR$/Exercise Files/Ch01/01_02/End/01_02.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Exercise Files/Ch01/01_02/Start/01_02.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
@@ -331,6 +377,12 @@
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Exercise Files/Ch04/04_03/End/04_03.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise Files/Ch01/01_02/End/01_02.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise Files/Ch01/01_03/End/01_03.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
   </component>
