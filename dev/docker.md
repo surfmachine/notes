@@ -75,7 +75,9 @@ docker rm [container-id]          | remove container (must be stopped before )
 docker rm $(docker ps –a –q)      | remove all containers! 
 docker logs [id]                  | show log of the image's application
 docker exec -it [id] bash         | open bash in running container
+docker run  -it [id] bash         | start container and open bash
 winpty docker exec -it [id] bash  | open bash in running container on windows
+winpty docker run  -it [id] bash  | start container and open bash on windows
 
 ## misc
 
