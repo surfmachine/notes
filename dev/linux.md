@@ -3,7 +3,6 @@ Linux
 
 [TOC]
 
-
 -------------------------------------------------------------------------------
 # Commands
 
@@ -138,6 +137,10 @@ Location                               | Description
 ## ZIP
 > zipinfo archiv/xy-0.3.0.jar | less
 
+-------------------------------------------------------------------------------
+# Ubuntu
+
+
 ## Ubuntuy Unity - Reset Settings
 I had the similar problem in 14.10 .  I solved it by deleting the files:
 
@@ -147,6 +150,22 @@ I had the similar problem in 14.10 .  I solved it by deleting the files:
 It worked out for me, in case if it doesn't work out for you try installing
 a different window manager(in my case I had cinnamon and was able to use it
 smoothly even when I had problems in default window manager).
+
+## Ubuntu archives
+
+- Ubuntu Versions
+  https://en.wikipedia.org/wiki/Ubuntu_version_history
+
+- Repositories
+  https://help.ubuntu.com/community/Repositories 
+
+- URL's / Sources
+  The repository url's are stored in the file: /etc/apt/sources.list
+
+- Modify sources.list within Docker Build:
+  ```
+  RUN echo 'deb http://nexus.mobicorp.ch:8443/nexus/repository/Ubuntu_16.04/ xenial main' > /etc/apt/sources.list
+  ```
 
 -------------------------------------------------------------------------------
 # Software
