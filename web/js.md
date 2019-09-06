@@ -372,6 +372,9 @@ https://hackernoon.com/how-not-to-sort-an-array-in-javascript-5t2a32av4?utm_medi
 ## JS  Design Pattern
 https://addyosmani.com/resources/essentialjsdesignpatterns/book/#commandpatternjavascript
 
+## JS Symbols
+http://thecodebarbarian.com/a-practical-guide-to-symbols-in-javascript.html
+
 ## Understanding JSON in JavaScript
 https://itnext.io/understanding-json-in-javascript-5098876d0915?mkt_tok=eyJpIjoiTWpKbVkySmhNMk16TVRFMyIsInQiOiJ5MjA2cEY4T01SK2ZNZTgxdFFUXC9tT3JUdTBwb0RZZzVuR2I2QU00WloyQk01Mm55REVxN01Bd1RjNmZrZHQwUzVndGI5WDRIV3c2QVFyYVg3NEI5OGpBYU1OdVd1bEhwYTRMZFhuMjFUdTZaaE1Rd1lWeHZyTm9sQ0RYYlZmcEEifQ%3D%3D 
 
