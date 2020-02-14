@@ -275,6 +275,12 @@ git stash apply   | move changes back to working directory
 -------------------------------------------------------------------------------
 # Samples
 
+## Reset master to specific git commmit id
+git log
+git reset --hard [git-commit-id]
+git --force push
+
+
 ## Merge mit vorherigem rebase
 git checkout master
 git pull
