@@ -221,8 +221,14 @@ I think it is an eloquent way of checking nested properties and makes the code w
 
 ## Class properties & binding
 
-Binding functions in JavaScript is a common task. With the introduction of arrow functions in the ES6 spec, we now have a way to automatically bind functions to the declaration context — very useful and commonly used amongst JavaScript developers. When classes were first introduced, you could no longer really use arrow functions because class methods have to be declared in a specific way. We needed to bind functions elsewhere, for example in the constructor (best practice with React.js). I was always bugged by the workflow of first defining class methods and then binding them, it just seems ridiculous after a while. With the class property syntax, we can use arrow functions again and get the advantages of auto-binding. Arrow function can now be used inside the class. Here is an example with _increaseCount being bound:
+Binding functions in JavaScript is a common task. With the introduction of arrow functions in the ES6 spec, we now have a way to automatically bind functions to the declaration context — very useful and commonly used amongst JavaScript developers. 
+- When classes were first introduced, you could no longer really use arrow functions because class methods have to be declared in a specific way. 
+- We needed to bind functions elsewhere, for example in the constructor (best practice with React.js). 
+- I was always bugged by the workflow of first defining class methods and then binding them, it just seems ridiculous after a while. 
+- With the class property syntax, we can use arrow functions again and get the advantages of auto-binding. 
+- Arrow function can now be used inside the class. 
 
+Here is an example with _increaseCount being bound:
 ```
 class Counter extends React.Component {
     constructor(props) {
@@ -255,6 +261,10 @@ https://levelup.gitconnected.com/9-tricks-for-kickass-javascript-developers-in-2
 
 -------------------------------------------------------------------------------
 # Language 
+
+## Java Script Class fields (experimental)
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields
 
 ## JavaScript Standard Style
 
