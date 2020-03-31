@@ -218,7 +218,6 @@ smoothly even when I had problems in default window manager).
   > Show & search applications
 
 
-
 -------------------------------------------------------------------------------
 # References
 
