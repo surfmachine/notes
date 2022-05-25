@@ -275,6 +275,11 @@ git stash apply   | move changes back to working directory
 -------------------------------------------------------------------------------
 # Samples
 
+## chmod
+Change mod of all scripts of folder scripts/* to executable (+x):
+git update-index --chmod=+x scripts/*
+git ls-files --stage scripts/
+
 ## Reset master to specific git commmit id
 git log
 git reset --hard [git-commit-id]
